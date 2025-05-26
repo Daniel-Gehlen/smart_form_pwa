@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Formulários Inteligente</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="images/icon-512x512.png" sizes="512x512">
+    <meta name="theme-color" content="#2196F3"/>
+    <meta name="description" content="Um gerador de formulários inteligente e multiplataforma.">
+</head>
+<body>
+    <header>
+        <h1>Gerador de Formulários Inteligente</h1>
+    </header>
+    <main>
+        <section id="form-builder">
+            <h2>Criar Novo Formulário</h2>
+            <div id="form-fields-container">
+                </div>
+            <button id="addFieldBtn">Adicionar Campo</button>
+            <button id="saveFormDefinitionBtn">Salvar Definição do Formulário</button>
+        </section>
+
+        <section id="form-management">
+            <h2>Gerenciar Formulários Existentes</h2>
+            <ul id="managedFormList">
+                </ul>
+        </section>
+
+        <section id="form-display">
+            <h2>Preencher Formulário</h2>
+            <select id="formSelector">
+                <option value="">Selecione um formulário</option>
+            </select>
+            <form id="dynamicForm">
+                <button type="submit">Submeter</button>
+            </form>
+        </section>
+
+        <section id="submissions-display">
+            <h2>Submissões</h2>
+            <ul id="submissionList">
+                </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Gerador de Formulários Inteligente</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Registra o Service Worker para tornar o app instalável e offline
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js')
+                    .then(registration => {
+                        console.log('Service Worker registrado com sucesso:', registration);
+                    })
+                    .catch(error => {
+                        console.error('Falha ao registrar o Service Worker:', error);
+                    });
+            });
+        }
+    </script>
+</body>
+</html>
