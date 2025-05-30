@@ -3,8 +3,20 @@
 ## 🚀 Project Overview
 The **Smart Form PWA** is an intelligent, cross-platform form generator that works offline, storing data locally in the browser. The project demonstrates advanced modern web development techniques with a focus on Progressive Web Apps (PWAs).
 
-![Architecture Diagram](https://i.imgur.com/JKvQ8aP.png)
-
+## Architecture
+```
+📄  manifest.json
+📁 images/
+    📄  manifest.json
+    📄 index.html
+    📄 script.js
+    📄 service-worker.js
+    📄 style.css
+📄 index.html
+📄 script.js
+📄 service-worker.js
+📄 style.css
+```
 ## 🔧 Technologies Used
 
 ### Core Stack
